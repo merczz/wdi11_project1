@@ -1,0 +1,31 @@
+<h1> Gallery</h1>
+<b>Your Albums</b><br>
+
+    <%= form_for(@album, url:'/albums') do |f| %>  
+    <%= f.text_area :name, :placeholder => "New album name" %> 
+    <%= f.submit "Create New Album" %> 
+<% end %>
+
+<% @albums.each do |f| %>
+	<% if f.user_id == current_user.id %>
+			name:<%= f.name %><br>
+			status:<% if f.is_private %>
+					<%= "Private" %>
+					<% else %>
+					<%= "Public" %>
+					<% end %>
+					<br>
+					<%= link_to 'Remove Album', album_path(f.id),
+            data: {confirm: 'Are you sure?'}, :method => :delete %>
+					<br>
+					<%= link_to 'Update Album', images_show_path(:album_id=>f.id) %>
+					<br>
+			<% f.images.each do |i| %>
+				<div class="thumbnail">
+					<%= image_tag i.url, :alt => i.name %>
+				</div>
+			<% end %>
+
+	<% end %>
+	<br>
+<% end %>

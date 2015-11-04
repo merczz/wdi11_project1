@@ -1,0 +1,12 @@
+					
+<%= link_to "Home", '/' %>
+
+<h1>Album: <%= @album.name %> </h1>
+
+<% @images.each do |i| %>
+	<div class="thumbnail"><%= image_tag i.url, :alt => i.name %></div>
+	<%= i.name %>
+	<%= link_to "Update", "/images/update" %>
+	<%= link_to "Delete", "/images/delete" %>
+	<br>
+<% end %>
