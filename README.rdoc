@@ -1,28 +1,44 @@
-== README
+==WDI project1
+November 2015
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+==FUNCTIONS
 
-Things you may want to cover:
+Use Ruby on Rails to create a website and let user to show and store images.
 
-* Ruby version
+==Model
 
-* System dependencies
+* User
+* Album
+* Image
+* Relationship: User has many Albums
+* Relationship: Album has many images
 
-* Configuration
+==Controller
 
-* Database creation
+* Albums: show images; show, add and delete albums
+* Images: add and delete images
+* Sessions: Login and Logout
+* Users: create account
 
-* Database initialization
+==Views
 
-* How to run the test suite
+* Albums: index(show albums, homepage), show(show images in a album)
+* Images: new(add new images), show(for testing)
+* Layout: header(login status)
+* Session: new(login logout)
+* users: new(signup)
 
-* Services (job queues, cache servers, search engines, etc.)
+==Outcome
 
-* Deployment instructions
+* Get flexibility and control by not using scaffold 
 
-* ...
+* Start with tables that don't contain foreign key during database migration
 
+* Nested routes for parent and child objects
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* For a simple record update, update controll can be replaced with create and delete.
+
+* Get meaningful error message from Heroku deployment  
+  <tt>$heroku run rails control </tt>
+
+* Complete CSS after Heroku deployment

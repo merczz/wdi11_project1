@@ -8,13 +8,7 @@
 
 <% @albums.each do |f| %>
 	<% if f.user_id == current_user.id %>
-			<h1>Album name: <%= f.name %><h1>
-			<p>status:<% if f.is_private %>
-					<%= "Private" %>
-					<% else %>
-					<%= "Public" %>
-					<% end %>
-					</p>
+			<h1><%= f.name %><h1>
 					<%= link_to 'Remove Album', album_path(f.id),
             data: {confirm: 'Are you sure?'}, :method => :delete %>
 					
@@ -27,6 +21,7 @@
 			<% end %>
 
 	<% end %>
+<p>
 
 <% end %>
 </div>

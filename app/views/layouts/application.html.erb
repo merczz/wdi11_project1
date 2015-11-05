@@ -18,16 +18,20 @@
 
 
 <% if current_user %>
+<%= link_to "Log out", logout_path, method: "delete" %>
+<br>
 <p>You are logged in as <big><%= current_user.name %></big>.</p>
-<p> <%= link_to "Log out", logout_path, method: "delete" %></p>
+<p> </p>
 <% else %>
 <ul>
 	<li><%=link_to "Login", "login" %></li>
 	<li><%= link_to "Signup", "signup" %></li>
 </ul>
-<br><br>
+
 </div>
 <% end %>
+<p>
+<p>
 
 <div class="container">
 <%= yield %>
