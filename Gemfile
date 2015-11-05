@@ -52,4 +52,7 @@ group :development do
   gem 'meta_request'
  gem 'bcrypt'  #for login password
 end
+#heroku
+gem 'rails_12factor', group: :production
+ruby "2.2.3"
 

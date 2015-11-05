@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :users
   resources :albums
   # resources :images
-  root 'albums#index'
+  root 'users#new'
   get 'signup' => 'users#new'
   post 'users' => 'users#create'
   get 'login' => 'sessions#new'
