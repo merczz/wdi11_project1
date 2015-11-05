@@ -1,0 +1,22 @@
+					
+
+
+<%= link_to 'Remove Album', album_path(@album.id),
+            data: {confirm: 'Are you sure?'}, :method => :delete %>
+<%= link_to "Add new image", new_album_image_path(@album)%>
+ <h1><%= @album.name %> </h1>
+<% if @images.present? %>
+   
+   <br>
+	<% @images.each do |i| %>
+		<div class="thumbnail"><%= image_tag i.url, :alt => i.name %><div class="delete_box"><%= link_to "delete", images_show_path(:id => i.id), :method => :delete %></div></div>
+		
+		
+		
+	<% end %>
+<% else %>
+	<p>This album is empty 
+	<p>
+	<p>
+		<%= link_to "Click here to add some images", new_album_image_path(@album)%>
+<% end %>

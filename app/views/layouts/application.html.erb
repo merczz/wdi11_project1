@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Library3</title>
+  <title>Image Gallery</title>
+  <link href="http://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,300' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<div class="header">
+      
+        <%= link_to root_path do %>
+          <div class = "logo">Image Gallery</div>
+        <% end %>
+
+
 <% if current_user %>
-<ul>
-	<li><%= current_user.name %></li>
-	<li><%= link_to "Log out", logout_path, method: "delete" %></li>
-</ul>
+<p>You are logged in as <big><%= current_user.name %></big>.</p>
+<p> <%= link_to "Log out", logout_path, method: "delete" %></p>
 <% else %>
 <ul>
 	<li><%=link_to "Login", "login" %></li>
 	<li><%= link_to "Signup", "signup" %></li>
 </ul>
+<p>
+</div>
 <% end %>
 
-
-
+<div class="container">
 <%= yield %>
+
+
+
+</div>
 
 </body>
 </html>

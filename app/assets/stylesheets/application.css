@@ -15,12 +15,99 @@
  */
  html, body {
   background: #fff;
-  font-family: Arial, sans-serif;
+  font-family: 'Enriqueta', Arial, sans-serif;
   font-weight: bold;
   margin: 0;
   padding: 0;
   text-transform: lowercase;
 }
+
+.container {
+  padding: 0;
+  width: 70%;
+  margin-to: 20px;
+}
+
+/* HEADER */
+
+
+.logo {
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 2px #CCCCCC;
+  color: #7c795d; 
+  font-family: 'Enriqueta', arial, serif; 
+  line-height: 1.25; 
+  margin: 10px; 
+  font-size: 40px; 
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.header p{
+ margin-left: 10px;
+
+ padding: 0;
+}
+
+.header li {
+ display: inline;
+ margin-left: 0px;
+ padding: 0;
+}
+
+.header a {
+  color: #000;
+  font-size: 15px;  
+  text-decoration: none; 
+  margin-left: 0px;
+  padding: 10px 10px 10px;
+  background-color: #F1f2f3;
+}
+
+.header a:hover {
+  color: #c91717;
+  text-decoration: none;   
+}
+
+.album h1 {
+  font-size: 25px;
+  color: #000;
+  font-weight: bold;
+  margin: 20px 0 30px 10px;
+
+}
+
+
+.album p {
+  font-size: 14px;
+  text-transform: lowercase;
+  color: #000;
+}
+
+.album a {
+  color: #000;
+  font-size: 15px;  
+  text-decoration: none; 
+  text-transform: uppercase;
+  margin-left: 0px;
+  padding: 12px 12px 12px;
+  background-color: #F1f2f3;
+}
+
+.album a:hover {
+  color: #c91717;
+  text-decoration: none;  
+  text-transform: uppercase; 
+}
+.delete_box{
+  position: absolute; 
+  bottom: 1em; 
+  right: 2em; 
+  width: 40px; 
+  opacity: 0.6;
+}
+
+
 /*thumbnail*/
 .thumbnail {
   position: relative;
@@ -43,3 +130,81 @@
   width: 100%;
   height: auto;
 }
+
+/* FORM PAGES */
+
+
+.form {
+  text-align:center;
+  margin: 0 auto 10px;
+  padding: 20px 0 10px 0;
+  font-size: 16px;
+  width: 200px;
+  vertical-align: center;
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+  color: #666666;
+  width: 250px;
+  border: 1px solid #E6E6E6;
+  border-radius: 0px; 
+  height: 60px;
+  margin: 0px auto;
+  text-indent: 10px;
+}
+
+.btn-submit {
+  color: #FFFFFF;
+  font-size: 12px;
+  text-transform: uppercase;
+  background: #7F211F;
+  padding: 10px 20px;
+  border: 0;
+  height: 35px;
+  margin: 0px auto;
+}
+
+  
+/*  RESPONSIVE */
+
+/*@media screen and (max-width: 992px) {
+  .img-container img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .pull-right {
+    background-color: #f1f2f2;
+    position: relative;
+    margin: 0;
+    width: 100%;
+  }
+
+  .pull-right ul {
+    margin: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-before: 0;
+    -webkit-padding-start: 0;
+  }
+
+  .pull-right ul li {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    width: 50%;
+  }
+
+  .pull-right ul li a {
+    display: block;
+    width: 100%;
+  }
+
+  .img-container {
+    height: 200px;
+  }
+}*/

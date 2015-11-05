@@ -6,23 +6,23 @@ class AlbumsController < ApplicationController
     @images = Image.all
     @album = Album.new
   end
-  def new
+
+  def show
+    @album = Album.find(params[:id])
+    @images = @album.images
   end
   def edit
   end
-
+  def new
+  end
   def create
-    # if @album
     @album = Album.new(album_params)
     @album.user_id = current_user.id
-    @album.save
     if @album.save
       redirect_to '/'
     else
       render 'new'
     end
-    # end
-    
   end
 
     def destroy
@@ -34,13 +34,10 @@ class AlbumsController < ApplicationController
     redirect_to '/'
   end
 
-
   private
   def album_params
     params.require(:album).permit(:name)
   end
-
-
 
 
 end

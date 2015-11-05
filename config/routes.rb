@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   resources :users
-  resources :albums
-  # resources :images
-  root 'users#new'
+
+  resources :albums do
+    resources :images
+  end
+  
+  root 'albums#index'
   get 'signup' => 'users#new'
   post 'users' => 'users#create'
   get 'login' => 'sessions#new'
@@ -11,9 +14,18 @@ Rails.application.routes.draw do
 
   post 'albums' => 'albums#create'
   delete 'albums/:id' => 'albums#destroy'
+  get 'albums/:id' => 'albums#show' 
 
+  get 'images/new' => 'images#new'
+  post 'images' => 'images#create'
+
+  delete 'images/delete' => 'images#destroy'
+
+
+#for testing
   get 'images/show' => 'images#show'
-  get 'images/:id/edit' => 'images#edit'
+  delete 'images/show/' => 'images#destroy'
+  # get 'images/:id/edit' => 'images#edit'
 
 
   

@@ -1,6 +1,8 @@
+<div class="album">
 <h1>Log in</h1>
 <%= form_for(:session, url: login_path) do |f| %>
 <%= f.text_field :name, :placeholder => "Login name" %>
 <%= f.password_field :password, :placeholder => "Password" %>
-<%= f.submit "Log in" %>
+<%= f.submit "Log in", class:"btn-submit"  %>
 <% end %>
+</div>
