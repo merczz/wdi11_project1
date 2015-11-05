@@ -17,7 +17,7 @@
   background: #fff;
   font-family: 'Enriqueta', Arial, sans-serif;
   font-weight: bold;
-  margin: 0;
+  margin: 0px;
   padding: 0;
   text-transform: lowercase;
 }
@@ -25,7 +25,7 @@
 .container {
   padding: 0;
   width: 70%;
-  margin-to: 20px;
+  margin-left: 20px;
 }
 
 /* HEADER */
